@@ -1,0 +1,359 @@
+﻿{
+    "WindowsApps":  [
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.XboxApp",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.SkypeApp",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.ZuneMusic",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.MicrosoftOfficeHub",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "king.com.CandyCrushSaga",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "king.com.CandyCrushSodaSaga",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "king.com.FarmHeroesSaga",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "king.com.BubbleWitch3Saga",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.BingNews",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.BingWeather",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.MixedReality.Portal",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.MSPaint",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.Microsoft3DViewer",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.MicrosoftSolitaireCollection",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.GetHelp",
+                            "Version":  null,
+                            "Exists":  false
+                        },
+                        {
+                            "PackageFullName":  null,
+                            "AppName":  "Microsoft.Getstarted",
+                            "Version":  null,
+                            "Exists":  false
+                        }
+                    ],
+    "Services":  [
+                     {
+                         "ServiceName":  "XblAuthManager",
+                         "OriginalStatus":  "Stopped",
+                         "OriginalStartType":  "Disabled",
+                         "Exists":  true
+                     },
+                     {
+                         "ServiceName":  "XblGameSave",
+                         "OriginalStatus":  "Stopped",
+                         "OriginalStartType":  "Disabled",
+                         "Exists":  true
+                     },
+                     {
+                         "ServiceName":  "XboxNetApiSvc",
+                         "OriginalStatus":  "Stopped",
+                         "OriginalStartType":  "Disabled",
+                         "Exists":  true
+                     },
+                     {
+                         "ServiceName":  "WSearch",
+                         "OriginalStatus":  "Stopped",
+                         "OriginalStartType":  "Disabled",
+                         "Exists":  true
+                     },
+                     {
+                         "ServiceName":  "SysMain",
+                         "OriginalStatus":  "Stopped",
+                         "OriginalStartType":  "Disabled",
+                         "Exists":  true
+                     },
+                     {
+                         "ServiceName":  "BITS",
+                         "OriginalStatus":  "Stopped",
+                         "OriginalStartType":  "Disabled",
+                         "Exists":  true
+                     },
+                     {
+                         "ServiceName":  "WerSvc",
+                         "OriginalStatus":  "Stopped",
+                         "OriginalStartType":  "Disabled",
+                         "Exists":  true
+                     },
+                     {
+                         "ServiceName":  "DiagTrack",
+                         "OriginalStatus":  "Stopped",
+                         "OriginalStartType":  "Disabled",
+                         "Exists":  true
+                     },
+                     {
+                         "ServiceName":  "dmwappushservice",
+                         "OriginalStatus":  "Stopped",
+                         "OriginalStartType":  "Disabled",
+                         "Exists":  true
+                     }
+                 ],
+    "Timestamp":  "2025-05-24 17:48:34",
+    "Registry":  [
+                     {
+                         "Exists":  true,
+                         "Name":  "AllowTelemetry",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "AllowCortana",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "DisabledByGroupPolicy",
+                         "NewType":  "DWord",
+                         "OriginalValue":  1,
+                         "Path":  "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\AdvertisingInfo",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "1"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "VisualFXSetting",
+                         "NewType":  "DWord",
+                         "OriginalValue":  2,
+                         "Path":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\VisualEffects",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "2"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "StartupDelayInMSec",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Serialize",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "EnablePrefetcher",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "DODownloadMode",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeliveryOptimization\\Config",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "AutoConnectAllowedOEM",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKLM:\\SOFTWARE\\Microsoft\\WcmSvc\\wifinetworkmanager\\config",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "GlobalUserDisabled",
+                         "NewType":  "DWord",
+                         "OriginalValue":  1,
+                         "Path":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\BackgroundAccessApplications",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "1"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "DownloadMode",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeliveryOptimization\\Config",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "Disabled",
+                         "NewType":  "DWord",
+                         "OriginalValue":  1,
+                         "Path":  "HKLM:\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "1"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "MaintenanceDisabled",
+                         "NewType":  "DWord",
+                         "OriginalValue":  1,
+                         "Path":  "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\Maintenance",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "1"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "SpynetReporting",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Spynet",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "SubmitSamplesConsent",
+                         "NewType":  "DWord",
+                         "OriginalValue":  2,
+                         "Path":  "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Spynet",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "2"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "DisableNotificationCenter",
+                         "NewType":  "DWord",
+                         "OriginalValue":  1,
+                         "Path":  "HKCU:\\Software\\Policies\\Microsoft\\Windows\\Explorer",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "1"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "ShowTaskViewButton",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "PeopleBand",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\People",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "HideFileExt",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     },
+                     {
+                         "Exists":  true,
+                         "Name":  "RotatingLockScreenOverlayEnabled",
+                         "NewType":  "DWord",
+                         "OriginalValue":  0,
+                         "Path":  "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager",
+                         "OriginalType":  "DWord",
+                         "NewValue":  "0"
+                     }
+                 ],
+    "ScheduledTasks":  [
+                           {
+                               "TaskName":  "\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator",
+                               "Exists":  false,
+                               "OriginalState":  null
+                           },
+                           {
+                               "TaskName":  "\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip",
+                               "Exists":  false,
+                               "OriginalState":  null
+                           }
+                       ],
+    "Commands":  [
+                     {
+                         "Timestamp":  "2025-05-24 17:48:38",
+                         "Command":  "taskkill /f /im OneDrive.exe; Start-Sleep -Seconds 2; if (Test-Path \"$env:SYSTEMROOT\\SysWOW64\\OneDriveSetup.exe\") { \u0026 \"$env:SYSTEMROOT\\SysWOW64\\OneDriveSetup.exe\" /uninstall } else { \u0026 \"$env:SYSTEMROOT\\System32\\OneDriveSetup.exe\" /uninstall }",
+                         "Description":  "Kill OneDrive process and uninstall OneDrive"
+                     },
+                     {
+                         "Timestamp":  "2025-05-24 17:48:40",
+                         "Command":  "Get-ChildItem -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\CloudStore\\Store\\Cache\\DefaultAccount\" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.Name -like \"*start.tilegrid*\" } | Remove-Item -Force -ErrorAction SilentlyContinue",
+                         "Description":  "Clear Start Menu tiles"
+                     },
+                     {
+                         "Timestamp":  "2025-05-24 17:48:41",
+                         "Command":  "Disable-ComputerRestore -Drive \"C:\\\"",
+                         "Description":  "Disable System Restore on C: drive"
+                     }
+                 ]
+}

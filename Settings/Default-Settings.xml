@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DebloatSettings>
+    <Category Name="Privacy">
+        <Item>
+            <Name>DisableTelemetry</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection</Path>
+            <Name>AllowTelemetry</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable Windows telemetry and data collection</Description>
+        </Item>
+        <Item>
+            <Name>DisableCortana</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search</Path>
+            <Name>AllowCortana</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable Cortana</Description>
+        </Item>
+        <Item>
+            <Name>DisableAdvertisingID</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo</Path>
+            <Name>DisabledByGroupPolicy</Name>
+            <Value>1</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable Advertising ID</Description>
+        </Item>
+    </Category>
+    
+    <Category Name="WindowsApps">
+        <Item>
+            <Name>RemoveXboxApp</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.XboxApp</Value>
+            <Description>Remove Xbox App</Description>
+        </Item>
+        <Item>
+            <Name>RemoveSkypeApp</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.SkypeApp</Value>
+            <Description>Remove Skype App</Description>
+        </Item>
+        <Item>
+            <Name>RemoveZuneMusic</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.ZuneMusic</Value>
+            <Description>Remove Groove Music (Zune Music)</Description>
+        </Item>
+    </Category>
+    
+    <Category Name="Services">
+        <Item>
+            <Name>DisableXboxServices</Name>
+            <Type>WindowsService</Type>
+            <Value>XblAuthManager</Value>
+            <Description>Disable Xbox Live Auth Manager service</Description>
+        </Item>
+        <Item>
+            <Name>DisableXboxGameSave</Name>
+            <Type>WindowsService</Type>
+            <Value>XblGameSave</Value>
+            <Description>Disable Xbox Live Game Save service</Description>
+        </Item>
+        <Item>
+            <Name>DisableXboxLiveNetworking</Name>
+            <Type>WindowsService</Type>
+            <Value>XboxNetApiSvc</Value>
+            <Description>Disable Xbox Live Networking Service</Description>
+        </Item>
+    </Category>
+    
+    <Category Name="ScheduledTasks">
+        <Item>
+            <Name>DisableCustomerExperienceProgram</Name>
+            <Type>ScheduledTask</Type>
+            <Value>\Microsoft\Windows\Customer Experience Improvement Program\Consolidator</Value>
+            <Description>Disable Customer Experience Improvement Program collection</Description>
+        </Item>
+        <Item>
+            <Name>DisableUsbCeip</Name>
+            <Type>ScheduledTask</Type>
+            <Value>\Microsoft\Windows\Customer Experience Improvement Program\UsbCeip</Value>
+            <Description>Disable USB Customer Experience Improvement Program</Description>
+        </Item>
+    </Category>
+    
+    <Category Name="Commands">
+        <Item>
+            <Name>DisableOneDrive</Name>
+            <Type>Command</Type>
+            <Value>taskkill /f /im OneDrive.exe; Start-Sleep -Seconds 2; if (Test-Path "$env:SYSTEMROOT\SysWOW64\OneDriveSetup.exe") { &amp; "$env:SYSTEMROOT\SysWOW64\OneDriveSetup.exe" /uninstall } else { &amp; "$env:SYSTEMROOT\System32\OneDriveSetup.exe" /uninstall }</Value>
+            <Description>Kill OneDrive process and uninstall OneDrive</Description>
+        </Item>
+        <Item>
+            <Name>ClearStartMenuTiles</Name>
+            <Type>Command</Type>
+            <Value>Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\CloudStore\Store\Cache\DefaultAccount" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.Name -like "*start.tilegrid*" } | Remove-Item -Force -ErrorAction SilentlyContinue</Value>
+            <Description>Clear Start Menu tiles</Description>
+        </Item>
+    </Category>
+    
+    <Category Name="Performance">
+        <Item>
+            <Name>DisableWindowsSearch</Name>
+            <Type>WindowsService</Type>
+            <Value>WSearch</Value>
+            <Description>Disable Windows Search indexing service</Description>
+        </Item>
+        <Item>
+            <Name>DisableVisualEffects</Name>
+            <Type>Registry</Type>
+            <Path>HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects</Path>
+            <Name>VisualFXSetting</Name>
+            <Value>2</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Set visual effects to best performance</Description>
+        </Item>
+        <Item>
+            <Name>DisableStartupDelay</Name>
+            <Type>Registry</Type>
+            <Path>HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Serialize</Path>
+            <Name>StartupDelayInMSec</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Remove startup delay for faster boot</Description>
+        </Item>
+        <Item>
+            <Name>DisableSuperfetch</Name>
+            <Type>WindowsService</Type>
+            <Value>SysMain</Value>
+            <Description>Disable Superfetch service</Description>
+        </Item>
+        <Item>
+            <Name>DisablePrefetch</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters</Path>
+            <Name>EnablePrefetcher</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable Windows Prefetch</Description>
+        </Item>
+    </Category>
+    
+    <Category Name="BloatwareApps">
+        <Item>
+            <Name>RemoveOfficeHub</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.MicrosoftOfficeHub</Value>
+            <Description>Remove Office Hub</Description>
+        </Item>
+        <Item>
+            <Name>RemoveCandyCrush</Name>
+            <Type>WindowsApp</Type>
+            <Value>king.com.CandyCrushSaga</Value>
+            <Description>Remove Candy Crush Saga</Description>
+        </Item>
+        <Item>
+            <Name>RemoveCandyCrushSoda</Name>
+            <Type>WindowsApp</Type>
+            <Value>king.com.CandyCrushSodaSaga</Value>
+            <Description>Remove Candy Crush Soda Saga</Description>
+        </Item>
+        <Item>
+            <Name>RemoveFarmHeroes</Name>
+            <Type>WindowsApp</Type>
+            <Value>king.com.FarmHeroesSaga</Value>
+            <Description>Remove Farm Heroes Saga</Description>
+        </Item>
+        <Item>
+            <Name>RemoveBubbleWitch</Name>
+            <Type>WindowsApp</Type>
+            <Value>king.com.BubbleWitch3Saga</Value>
+            <Description>Remove Bubble Witch 3 Saga</Description>
+        </Item>
+        <Item>
+            <Name>RemoveNews</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.BingNews</Value>
+            <Description>Remove Microsoft News</Description>
+        </Item>
+        <Item>
+            <Name>RemoveWeather</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.BingWeather</Value>
+            <Description>Remove Weather app</Description>
+        </Item>
+        <Item>
+            <Name>RemoveMixedReality</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.MixedReality.Portal</Value>
+            <Description>Remove Mixed Reality Portal</Description>
+        </Item>
+        <Item>
+            <Name>RemovePaint3D</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.MSPaint</Value>
+            <Description>Remove Paint 3D</Description>
+        </Item>
+        <Item>
+            <Name>Remove3DViewer</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.Microsoft3DViewer</Value>
+            <Description>Remove 3D Viewer</Description>
+        </Item>
+        <Item>
+            <Name>RemoveSolitaire</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.MicrosoftSolitaireCollection</Value>
+            <Description>Remove Microsoft Solitaire Collection</Description>
+        </Item>
+        <Item>
+            <Name>RemoveGetHelp</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.GetHelp</Value>
+            <Description>Remove Get Help app</Description>
+        </Item>
+        <Item>
+            <Name>RemoveGetStarted</Name>
+            <Type>WindowsApp</Type>
+            <Value>Microsoft.Getstarted</Value>
+            <Description>Remove Get Started app</Description>
+        </Item>
+    </Category>
+    
+    <Category Name="NetworkConnectivity">
+        <Item>
+            <Name>DisableAutoUpdateDeliveryOptimization</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config</Path>
+            <Name>DODownloadMode</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable Delivery Optimization for Windows Updates</Description>
+        </Item>
+        <Item>
+            <Name>DisableWiFiSense</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\config</Path>
+            <Name>AutoConnectAllowedOEM</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable WiFi Sense</Description>
+        </Item>
+        <Item>
+            <Name>DisableBackgroundApps</Name>
+            <Type>Registry</Type>
+            <Path>HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications</Path>
+            <Name>GlobalUserDisabled</Name>
+            <Value>1</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable background apps</Description>
+        </Item>
+        <Item>
+            <Name>DisableWindowsUpdateP2P</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config</Path>
+            <Name>DownloadMode</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable Windows Update P2P sharing</Description>
+        </Item>
+    </Category>
+    
+    <Category Name="SecurityUpdates">
+        <Item>
+            <Name>DisableErrorReporting</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SOFTWARE\Microsoft\Windows\Windows Error Reporting</Path>
+            <Name>Disabled</Name>
+            <Value>1</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable Windows Error Reporting</Description>
+        </Item>
+        <Item>
+            <Name>DisableAutomaticMaintenance</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance</Path>
+            <Name>MaintenanceDisabled</Name>
+            <Value>1</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable automatic maintenance</Description>
+        </Item>
+        <Item>
+            <Name>DisableDefenderCloudProtection</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet</Path>
+            <Name>SpynetReporting</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable Windows Defender cloud protection</Description>
+        </Item>
+        <Item>
+            <Name>DisableDefenderSubmitSamples</Name>
+            <Type>Registry</Type>
+            <Path>HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet</Path>
+            <Name>SubmitSamplesConsent</Name>
+            <Value>2</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Never submit samples to Windows Defender</Description>
+        </Item>
+    </Category>
+    
+    <Category Name="UserInterface">
+        <Item>
+            <Name>DisableActionCenter</Name>
+            <Type>Registry</Type>
+            <Path>HKCU:\Software\Policies\Microsoft\Windows\Explorer</Path>
+            <Name>DisableNotificationCenter</Name>
+            <Value>1</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable Action Center notifications</Description>
+        </Item>
+        <Item>
+            <Name>DisableTaskViewButton</Name>
+            <Type>Registry</Type>
+            <Path>HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</Path>
+            <Name>ShowTaskViewButton</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Hide Task View button from taskbar</Description>
+        </Item>
+        <Item>
+            <Name>DisablePeopleButton</Name>
+            <Type>Registry</Type>
+            <Path>HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People</Path>
+            <Name>PeopleBand</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Hide People button from taskbar</Description>
+        </Item>
+        <Item>
+            <Name>ShowFileExtensions</Name>
+            <Type>Registry</Type>
+            <Path>HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced</Path>
+            <Name>HideFileExt</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Show file extensions in File Explorer</Description>
+        </Item>
+        <Item>
+            <Name>DisableLockScreenTips</Name>
+            <Type>Registry</Type>
+            <Path>HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager</Path>
+            <Name>RotatingLockScreenOverlayEnabled</Name>
+            <Value>0</Value>
+            <ValueType>DWord</ValueType>
+            <Description>Disable lock screen tips and tricks</Description>
+        </Item>
+    </Category>
+    
+    <Category Name="BackgroundProcesses">
+        <Item>
+            <Name>DisableBITS</Name>
+            <Type>WindowsService</Type>
+            <Value>BITS</Value>
+            <Description>Disable Background Intelligent Transfer Service</Description>
+        </Item>
+        <Item>
+            <Name>DisableWerSvc</Name>
+            <Type>WindowsService</Type>
+            <Value>WerSvc</Value>
+            <Description>Disable Windows Error Reporting Service</Description>
+        </Item>
+        <Item>
+            <Name>DisableSystemRestore</Name>
+            <Type>Command</Type>
+            <Value>Disable-ComputerRestore -Drive "C:\"</Value>
+            <Description>Disable System Restore on C: drive</Description>
+        </Item>
+        <Item>
+            <Name>DisableDiagTrack</Name>
+            <Type>WindowsService</Type>
+            <Value>DiagTrack</Value>
+            <Description>Disable Connected User Experiences and Telemetry</Description>
+        </Item>
+        <Item>
+            <Name>DisableDmwappushservice</Name>
+            <Type>WindowsService</Type>
+            <Value>dmwappushservice</Value>
+            <Description>Disable Device Management Wireless Application Protocol</Description>
+        </Item>
+    </Category>
+</DebloatSettings>
