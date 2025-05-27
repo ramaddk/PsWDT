@@ -115,6 +115,10 @@ Desktop.ini
 *.swp
 *.swo
 
+# Backup folder
+backup/
+backup/*
+
 # Local configuration
 .env
 .env.local
